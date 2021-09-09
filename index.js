@@ -30,26 +30,35 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-function getAllMovieTitles() {}
 
-/**
- * checkIfAnyMovieHasRating()
- * -----------------------------
- * Returns a boolean, representing whether or not any of the movies has been given the provided rating. If the inputted `movies` array is empty, throw an error with a message.
- * @param {Object[]} movies - An array of movies. See the `movies.js` file for an example of this array.
- * @param {string} [rating="G"] - A movie rating. Defaults to "G".
- * @returns {boolean|Error} Returns `true` if a movie exists in the list with the given rating, otherwise returns `false`.
- *
- * NOTE: You must use the `.some()` method.
- *
- * EXAMPLE:
- *  checkIfAnyMovieHasRating(movies, "G");
- *  //> true
- *
- * EXAMPLE:
- *  checkIfAnyMovieHasRating(movies, "R");
- *  //> false
- */
+function getAllMovieTitles(movies){
+  if(movies.length === 0){
+    throw "You must input a movie!";
+  }
+  let titleArr = movies.map((movie)=>{
+    return movie.title;
+  })
+  return titleArr;
+}
+
+
+//  * checkIfAnyMovieHasRating()
+//  * -----------------------------
+//  * Returns a boolean, representing whether or not any of the movies has been given the provided rating. If the inputted `movies` array is empty, throw an error with a message.
+//  * @param {Object[]} movies - An array of movies. See the `movies.js` file for an example of this array.
+//  * @param {string} [rating="G"] - A movie rating. Defaults to "G".
+//  * @returns {boolean|Error} Returns `true` if a movie exists in the list with the given rating, otherwise returns `false`.
+//  *
+//  * NOTE: You must use the `.some()` method.
+//  *
+//  * EXAMPLE:
+//  *  checkIfAnyMovieHasRating(movies, "G");
+//  *  //> true
+//  *
+//  * EXAMPLE:
+//  *  checkIfAnyMovieHasRating(movies, "R");
+//  *  //> false
+//  */
 function checkIfAnyMovieHasRating() {}
 
 /**
